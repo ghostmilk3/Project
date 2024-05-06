@@ -1,0 +1,154 @@
+{
+  "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+      "jasmine": "readonly",
+      "beforeAll": "readonly",
+      "afterAll": "readonly",
+      "afterEach": "readonly",
+      "it": "readonly",
+      "describe": "readonly",
+      "beforeEach": "readonly",
+      "expect": "readonly"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "rules": {
+      // Use 4 spaces as indent.
+      "indent": [
+          "error",
+          2
+      ],
+      // Unix style line break is required.
+      "linebreak-style": [
+          "error",
+          "unix"
+      ],
+      // Should only use double quote.
+      "quotes": [
+          "error",
+          "single"
+      ],
+      // Semicolon is required.
+      "semi": [
+          "error",
+          "never"
+      ],
+      // == is not allowed.
+      "eqeqeq": "error",
+      // if (someCondition) a = 1; is not allowed.
+      "curly": "error",
+      // https://eslint.org/docs/rules/dot-location
+      "dot-location": [
+          "error",
+          "property"
+      ],
+      // a["abc"] is not allowed, use a.abc instead.
+      "dot-notation": "error",
+      // Do hasOwnProperty check in for in loop.
+      "guard-for-in": "error",
+      // Could not use eval.
+      "no-eval": "error",
+      // Could not extend native, e.g. Array, Object.
+      "no-extend-native": "error",
+      // Bind without using this is not allowed.
+      "no-extra-bind": "error",
+      // if (true) {{ a = 1 }} is not allowed.
+      "no-lone-blocks": "error",
+      // a =   1; is not allowed.
+      "no-multi-spaces": "error",
+      // var a = 071; is not allowed.
+      "no-octal": "error",
+      // var a = 1; var a = 2; is not allowed.
+      "no-redeclare": "error",
+      // a = a is not allowed.
+      "no-self-assign": "error",
+      // a === a is not allowed.
+      "no-self-compare": "error",
+      // a.foo.call(a, 1, 2) is not allowed.
+      "no-useless-call": "error",
+      // "\'" is not allowed, use "'" instead.
+      "no-useless-escape": "error",
+      // function () { this.a = 1; return; } is not allowed.
+      "no-useless-return": "error",
+      // parseInt("071") is not allowed, use parseInt("071", 10) instead.
+      "radix": "error",
+      // No shadowing variables are allowed.
+      "no-shadow": "error",
+      // Disallow undeclared variables.
+      "no-undef": "error",
+      // Disallow unused variables.
+      "no-unused-vars": "error",
+      // Disallow early use.
+      "no-use-before-define": ["error", { "functions": false }],
+      // Disallow or enforce spaces inside of blocks after opening block and before closing block.
+      "block-spacing": "error", // Could also be "never".
+      // https://eslint.org/docs/rules/brace-style
+      "brace-style": "error",
+      // Space before comma is not allowed, space after comma is required.
+      "comma-spacing": "error",
+      // Disallow or enforce spaces inside of computed properties.
+      "computed-property-spacing": "error",
+      // Disallow spacing between function identifiers and their invocations.
+      "func-call-spacing": "error",
+      // Enforce consistent spacing before and after keywords.
+      "keyword-spacing": "error",
+      // Disallow mixed spaces and tabs for indentation.
+      "no-mixed-spaces-and-tabs": "error",
+      // Disallow multiple empty lines.
+      "no-multiple-empty-lines": ["error", { "max": 1 }],
+      // Disallow trailing whitespace at the end of lines.
+      "no-trailing-spaces": "error",
+      // Disallow ternary operators when simpler alternatives exist.
+      "no-unneeded-ternary": "error",
+      // Disallow whitespace before properties.
+      "no-whitespace-before-property": "error",
+      // Enforce placing object properties on separate lines.
+      "object-property-newline": ["error", { "allowAllPropertiesOnSameLine": true }],
+      // Require or disallow padding within blocks.
+      "padded-blocks": ["error", "never"],
+      // Enforce location of semicolons to be last.
+      "semi-style": "error",
+      // Require Space Before Blocks.
+      "space-before-blocks": "error",
+      // Require a space before function parenthesis.
+      "space-before-function-paren": ["error", {"anonymous": "always", "named": "never", "asyncArrow": "always"}],
+      // Disallow spaces inside of parentheses.
+      "space-in-parens": "error",
+      // Require spacing around infix operators.
+      "space-infix-ops": "error",
+      // Require or disallow spaces before/after unary operators.
+      "space-unary-ops": "error",
+      // Requires a space or beginning a comment.
+      "spaced-comment": "error",
+      // Require space before/after arrow function's arrow.
+      "arrow-spacing": "error",
+      // Verify calls of super() in constructors.
+      "constructor-super": "error",
+      // Disallow modifying variables that are declared using const.
+      "no-const-assign": "error",
+      // Disallow duplicate name in class members.
+      "no-dupe-class-members": "error",
+      // Disallow use of this/super before calling super() in constructors.
+      "no-this-before-super": "error",
+      // Disallow unnecessary constructor.
+      "no-useless-constructor": "error",
+      // Suggest using template literals instead of string concatenation.
+      "prefer-template": "error",
+      // Enforce spacing between rest and spread operators and their expressions.
+      "rest-spread-spacing": "error",
+      // Enforce Usage of Spacing in Template Strings.
+      "template-curly-spacing": "error",
+      // Enforce a maximum line length.
+      "max-len": ["error", { "code": 180 }],
+      "object-curly-spacing": ["error", "always"]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "name": "yxu-service",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Yxu Service",
+  "main": "src/app",
+  "private": true,
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon -i \"*.test.js\" .",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "coverage": "npm test -- --coverage",
+    "lint": "eslint **/*.js"
+  },
+  "keywords": [
+    "rest",
+    "mongodb",
+    "jest"
+  ],
+  "author": "yxu",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "jest-environment-node",
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup.js"
+    ],
+    "transform": {}
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "dotenv": "^8.6.0",
+    "eslint": "^7.30.0",
+    "eslint-plugin-import": "^2.23.4",
+    "jest": "^26.6.3",
+    "mongodb-memory-server": "^6.9.6",
+    "nock": "^13.1.1",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.5",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-force-ssl": "^0.3.2",
+    "mongo-tenant": "^1.8.0",
+    "mongoose": "^5.13.2",
+    "mongoose-sequence": "^5.3.1",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-http": "^0.3.0",
+    "passport-http-bearer": "^1.0.1",
+    "passport-jwt": "^4.0.0",
+    "querymen": "^2.1.4",
+    "rand-token": "^1.0.1"
+  }
+}
